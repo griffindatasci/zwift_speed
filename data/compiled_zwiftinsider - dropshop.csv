@@ -1,0 +1,159 @@
+item,component,class,make,model,pref_name,drops,level,aero,weight
+FG0001,frame,gravel,Allied,Able,,721000,15,2,3
+FG0002,frame,gravel,Canyon,Grail,,355000,23,2,3
+FG0003,frame,gravel,Canyon,Inflite,,234300,10,2,2
+FG0004,frame,gravel,Cervelo,Aspero,,426000,13,3,3
+FG0005,frame,gravel,Giant,Revolt Advanced Pro,,298200,14,2,3
+FG0006,frame,gravel,Lauf,True Grit,,297500,11,2,2
+FG0007,frame,gravel,Liv,Devote Advanced Pro,,298200,14,2,3
+FG0008,frame,gravel,Specialized,Crux,,869800,17,2,3
+FG0009,frame,gravel,Specialized,Diverge,,532500,12,2,2
+FG0010,frame,gravel,Zwift,Gravel,,163300,0,2,2
+FH0001,frame,handcycle,Zwift,Handcycle,,0,0,4,1
+FM0001,frame,mtb,Canyon,Lux,,461500,10,1,1
+FM0002,frame,mtb,Scott,Spark RC,,418900,17,1,1
+FM0003,frame,mtb,Scott,Spark RC World Cup,,745400,21,1,1
+FM0004,frame,mtb,Specialized,Epic S-Works,,675900,5,1,1
+FM0005,frame,mtb,Trek,Super Caliber,,532500,20,1,1
+FM0006,frame,mtb,Zwift,Mountain,,0,0,1,1
+FR0001,frame,road,BMC,BMC TeamMachine,Teammachine,832900,26,3,3
+FR0002,frame,road,BMC,Roadmachine,,780900,21,2,3
+FR0003,frame,road,BMC,SLR01,Teammachine SLR01,376200,19,2,3
+FR0004,frame,road,Bridgestone,Anchor RS9s,,511200,15,2,4
+FR0005,frame,road,Cannondale,CAAD12,,184500,2,2,2
+FR0006,frame,road,Cannondale,EVO,,213000,9,2,4
+FR0007,frame,road,Cannondale,Super Six EVO,SuperSix EVO,816500,36,3,4
+FR0008,frame,road,Cannondale,Synapse,,298200,12,2,3
+FR0009,frame,road,Cannondale,System Six,SystemSix,497000,27,3,3
+FR0010,frame,road,Canyon,Aeroad,,532500,23,3,3
+FR0011,frame,road,Canyon,Aeroad 2021,Aeroad (2021),568000,10,3,3
+FR0012,frame,road,Canyon,Ultimate,,461500,10,2,4
+FR0013,frame,road,Canyon,Ultimate CFR,,639000,19,2,4
+FR0014,frame,road,Cervelo,R5,,461500,24,2,4
+FR0015,frame,road,Cervelo,S3D,,468600,13,3,2
+FR0016,frame,road,Cervelo,S5,,603500,25,3,3
+FR0017,frame,road,Cervelo,S5 2020,S5 (2020),852000,27,3,3
+FR0018,frame,road,Chapter2,KOKO,,639000,11,2,3
+FR0019,frame,road,Chapter2,Rere,RERE,355000,16,3,3
+FR0020,frame,road,Chapter2,Tere,TERE,390500,6,2,4
+FR0021,frame,road,Chapter2,Toa,TOA,426000,18,3,3
+FR0022,frame,road,Colnago,V3RS,,695800,18,2,3
+FR0023,frame,road,Cube,Litening,,177500,32,2,3
+FR0024,frame,road,Cube,Litening C:68X,,373500,32,2,4
+FR0025,frame,road,Factor,One,,426000,8,3,3
+FR0026,frame,road,Felt,AR,,639000,34,3,3
+FR0027,frame,road,Felt,FR,,851900,20,3,3
+FR0028,frame,road,Focus,Izalco Max,,426000,8,3,3
+FR0029,frame,road,Giant,Propel Advanced SL Disc,,816500,22,3,3
+FR0030,frame,road,Giant,TCR Advanced BikeExchange-Jayco Team,,745500,14,3,3
+FR0031,frame,road,Giant,TCR Advanced SL,,305300,8,2,3
+FR0032,frame,road,Liv,Langma Advanced SL,,745500,22,2,3
+FR0033,frame,road,Liv,Langma SL Advanced Disc,,745500,22,3,3
+FR0034,frame,road,Moots,Vamoots RCS,,852000,15,2,2
+FR0035,frame,road,Mosaic,RT-1d,,852000,15,2,2
+FR0036,frame,road,Parlee,ESX,,603500,16,3,3
+FR0037,frame,road,Parlee,RZ7,,511200,28,3,3
+FR0038,frame,road,Pinarello,Dogma 65.1,,603500,29,3,2
+FR0039,frame,road,Pinarello,Dogma F,,1029500,32,3,4
+FR0040,frame,road,Pinarello,Dogma F10,,710000,39,3,3
+FR0041,frame,road,Pinarello,Dogma F12,,958500,29,3,3
+FR0042,frame,road,Pinarello,Dogma F8,,0,0,3,3
+FR0043,frame,road,Ribble,Endurance,,390500,7,3,3
+FR0044,frame,road,Ridley,Helium,,461500,3,2,3
+FR0045,frame,road,Ridley,Noah Fast 2019,Noah Fast (2019),426000,9,3,3
+FR0046,frame,road,Scott,Addict RC,,852000,33,3,4
+FR0047,frame,road,Scott,Foil,,781000,17,3,3
+FR0048,frame,road,Scott,Foil 2023,Foil (2023),816500,22,3,3
+FR0049,frame,road,Specialized,Aethos S-Works,,923000,34,2,4
+FR0050,frame,road,Specialized,Allez,,127800,4,2,2
+FR0051,frame,road,Specialized,Allez Sprint,,127800,14,3,3
+FR0052,frame,road,Specialized,Amira,,142000,31,2,3
+FR0053,frame,road,Specialized,Amira S-Works,,355000,31,2,4
+FR0054,frame,road,Specialized,Roubaix,,461500,5,2,3
+FR0055,frame,road,Specialized,Roubaix S-Works,,745500,5,2,3
+FR0056,frame,road,Specialized,Ruby,,461500,5,2,3
+FR0057,frame,road,Specialized,Ruby S-Works,,745500,5,2,3
+FR0058,frame,road,Specialized,Tarmac,,0,0,2,4
+FR0059,frame,road,Specialized,Tarmac Pro,,408300,11,2,4
+FR0060,frame,road,Specialized,Tarmac SL7,,674500,5,3,3
+FR0061,frame,road,Specialized,Venge,,461500,18,3,3
+FR0062,frame,road,Specialized,Venge S-Works,,798800,33,3,3
+FR0063,frame,road,Trek,Emonda,,0,0,2,4
+FR0064,frame,road,Trek,Emonda SL,,142000,26,2,3
+FR0065,frame,road,Trek,Madone,,887500,20,3,3
+FR0066,frame,road,Uranium,Nuclear,,184500,19,3,3
+FR0067,frame,road,Van Rysel,EDR CF,,326600,12,2,3
+FR0068,frame,road,Ventum,NS1,,638900,15,3,3
+FR0069,frame,road,Zwift,Aero,,319500,6,3,3
+FR0070,frame,road,Zwift,Buffalo Fahrrad,,9500,40,1,1
+FR0071,frame,road,Zwift,Carbon,,0,0,2,3
+FR0072,frame,road,Zwift,Concept Z1,TRON,0,,3,3
+FR0073,frame,road,Zwift,Safety,,3550000,44,2,2
+FR0074,frame,road,Zwift,Steel,,142000,7,1,2
+FT0001,frame,tt,BMC,Timemachine01,Timemachine 01,781000,24,4,1
+FT0002,frame,tt,Cadex,Tri,,1029500,42,4,1
+FT0003,frame,tt,Canyon,Speedmax,,710000,21,4,1
+FT0004,frame,tt,Canyon,Speedmax CF SLX Disc,,891000,26,4,1
+FT0005,frame,tt,Cervelo,P5,,710000,15,4,1
+FT0006,frame,tt,Cervelo,PX-Series,,1065000,45,4,1
+FT0007,frame,tt,Cube,Aerium,,248500,28,4,1
+FT0008,frame,tt,Diamondback,Andean,,572900,35,4,1
+FT0009,frame,tt,Felt,IA,,1065000,37,4,1
+FT0010,frame,tt,Felt,IA 2.0,,1136000,34,4,1
+FT0011,frame,tt,Pinarello,Bolide,,923000,25,4,1
+FT0012,frame,tt,Pinarello,Bolide TT,,1065000,42,4,1
+FT0013,frame,tt,Quintana Roo,V-PR,,638600,16,4,1
+FT0014,frame,tt,Scott,Plasma,,852000,17,4,1
+FT0015,frame,tt,Scott,Plasma RC Ultimate,,1136000,33,4,1
+FT0016,frame,tt,Specialized,Shiv,,710000,10,4,1
+FT0017,frame,tt,Specialized,Shiv Disc,,994000,18,4,1
+FT0018,frame,tt,Specialized,Shiv S-Works,,852000,10,4,1
+FT0019,frame,tt,Trek,Speed Concept SLR 9,,958500,32,4,1
+FT0020,frame,tt,Ventum,One,,482800,31,4,1
+FT0021,frame,tt,Zwift,TT,,0,0,4,1
+WG0001,wheel,gravel,CADEX,AR 35,,21300,0,3,1
+WG0002,wheel,gravel,ENVE,G23,,17800,0,3,1
+WG0003,wheel,gravel,Reserve,25 GR,,11400,0,3,1
+WG0004,wheel,gravel,Roval,Terra CLX,,17800,0,3,1
+WG0005,wheel,gravel,Zwift,Gravel,,0,0,3,1
+WM0001,wheel,mtb,Zwift,Mountain,,0,0,1,1
+WR0001,wheel,road,Bontrager,Aeolus5,Aeolus 5,170400,20,3,3
+WR0002,wheel,road,CADEX,36,,257400,26,3,4
+WR0003,wheel,road,CADEX,42,,227200,8,3,3
+WR0004,wheel,road,CADEX,65,,241400,21,4,3
+WR0005,wheel,road,Campagnolo,Bora Ultra 35,,248500,33,2,4
+WR0006,wheel,road,Campagnolo,Bora Ultra 50,,262700,27,3,3
+WR0007,wheel,road,DT Swiss,ARC 1100 DiCut 62,ARC 1100 DICUT 62,184600,6,4,3
+WR0008,wheel,road,DT Swiss,ARC 1100 DiCut Disc,ARC 1100 DICUT DISC,1579800,42,4,1
+WR0009,wheel,road,ENVE,SES 2.2,,191700,17,2,4
+WR0010,wheel,road,ENVE,SES 3.4,,191700,4,3,4
+WR0011,wheel,road,ENVE,SES 6.7,,191700,25,3,2
+WR0012,wheel,road,ENVE,SES 7.8,,205900,39,4,2
+WR0013,wheel,road,ENVE,SES 8.9,,205900,31,4,1
+WR0014,wheel,road,FFWD,RYOT55,RYOT 55,113700,23,3,3
+WR0015,wheel,road,Giant,SLR 0,,191800,22,3,4
+WR0016,wheel,road,HED,Vanquish RC6 Pro,,227200,8,3,3
+WR0017,wheel,road,Lightweight,Meilenstein,,0,0,3,4
+WR0018,wheel,road,Mavic,Comete Pro Carbon SL UST,,142000,23,3,1
+WR0019,wheel,road,Mavic,Cosmic CXR60c,,142000,16,3,1
+WR0020,wheel,road,Mavic,Cosmic Ultimate UST,,142000,9,3,1
+WR0021,wheel,road,Novatec,R4,,95900,24,3,2
+WR0022,wheel,road,Roval,Alpinist CLX,,135300,32,3,4
+WR0023,wheel,road,Roval,CLX64,,170400,5,3,2
+WR0024,wheel,road,Roval,Rapide CLX,,195300,14,3,3
+WR0025,wheel,road,Shimano,C40,,85300,12,3,2
+WR0026,wheel,road,Shimano,C50,,88700,28,3,1
+WR0027,wheel,road,Shimano,C60,,92300,18,3,1
+WR0028,wheel,road,ZIPP,202,,149200,11,3,4
+WR0029,wheel,road,ZIPP,404,,149200,15,3,2
+WR0030,wheel,road,ZIPP,454,,284000,24,4,3
+WR0031,wheel,road,ZIPP,808,,177600,13,4,1
+WR0032,wheel,road,ZIPP,858,,312400,37,4,1
+WR0033,wheel,road,ZIPP,353 NSW,,255600,19,3,3
+WR0034,wheel,road,ZIPP,808/Super9,,1075700,35,4,1
+WR0035,wheel,road,ZIPP,858/Super9,,1508800,45,4,1
+WR0036,wheel,road,Zwift,32mm Carbon,,0,0,2,2
+WR0037,wheel,road,Zwift,50mm Carbon,,120700,7,3,2
+WR0038,wheel,road,Zwift,Buffalo Fahrrad,,3200,40,1,1
+WR0039,wheel,road,Zwift,Classic,,35600,2,1,1
+WR0040,wheel,road,Zwift,Safety,,710000,44,2,2
