@@ -16,7 +16,7 @@ format_dt <- function(x, right_cols=NA){
             escape=FALSE) 
 }
 
-bikes <- fread("../data/speed_data.txt")
+bikes <- fread("data/speed_data.txt")
 bikes[class=="road", class:="Road"]
 bikes[class=="tt", class:="TT"]
 
