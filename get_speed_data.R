@@ -45,7 +45,7 @@ bikes[, alp:=alp+base_alp]
 
 
 # Add TRON ---------------------------------------------------------------------
-bikes <- rbind(bikes, data.table(frame="TRON", wheel="", class="road", 
+bikes <- rbind(bikes, data.table(frame="<strong>Zwift TRON</strong>", wheel="-", class="road", 
                                  drops=0, level=0, tempus=3027, alp=2938))
 
 

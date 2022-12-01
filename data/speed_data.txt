@@ -3329,4 +3329,4 @@ Zwift TT	Zwift 50mm Carbon	tt	120700	7	3003.5	3028
 Zwift TT	Zwift Buffalo Fahrrad	tt	3200	40	3021	3034
 Zwift TT	Zwift Classic	tt	35600	2	3022	3035
 Zwift TT	Zwift Safety	tt	710000	44	3016.5	3026.5
-TRON	""	road	0	0	3027	2938
+<strong>Zwift TRON</strong>	-	road	0	0	3027	2938
