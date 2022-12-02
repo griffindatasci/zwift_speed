@@ -1,0 +1,82 @@
+body { 
+  font-family: 'Source Code Pro', monospace;
+  max-width: 1200px;
+  width: 94%;
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: 400;
+}
+
+a, strong {
+  color: #FC6719;
+}
+
+label > span {
+  font-weight: 700;
+}
+
+.irs-from, .irs-to, .irs-handle {
+  background-color: #FC6719 !important;
+  border: none !important;
+}
+
+.irs-handle {
+  width: 18px;
+  height: 18px;
+}
+
+.irs-bar {
+  background-color: #5b7175 !important;
+  border: none !important;
+}
+
+.shiny-input-panel {
+  border-radius: 1em;
+  margin: 2em 0;
+  padding: 1.5em;
+  text-align: center;
+}
+
+.shiny-input-container {
+  height: 75px;
+  margin-top: 0.5em;
+}
+
+.shiny-flow-layout {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+.shiny-flow-layout > div {
+  width: 250px;
+}
+
+.form-control {
+  text-align: center;
+}
+
+.checkbox {
+  margin-top: 0;
+}
+
+.footnote {
+  color: #505050;
+  margin: 3em 0;
+  border-top: 1px solid #FC6719;
+  padding-top: 1em;
+}
+
+@media (min-width:1025px) { 
+  body{
+    font-size: 14px;
+    width: 100%;
+  }
+}
