@@ -50,11 +50,25 @@ ui <- fluidPage(
     
   tags$h1("Zwift Speed Data"),
   
-  inputPanel(
-    sliderInput("level", "Unlock Level", value=c(0,60), min=0, max=60, dragRange=FALSE),
-    numericInput("drops", "Drops Budget", value=NA, min=1, max=6000000),
-    checkboxInput("incl_tt", "Include TT Frames", value=TRUE)
-  ),
+  
+  
+  
+  
+  
+  includeHTML("WWW/input_panel.html"),
+  textOutput("txt_level"), # TODO
+
+  # inputPanel(
+     sliderInput("level", "Unlock Level", value=c(0,60), min=0, max=60, dragRange=FALSE),
+  #   numericInput("drops", "Drops Budget", value=NA, min=1, max=6000000),
+  #   checkboxInput("incl_tt", "Include TT Frames", value=TRUE)
+  # ),
+  # 
+  
+  
+  
+  
+  
   
   tabsetPanel(
     tabPanel("Frames", dataTableOutput("frames")),
@@ -77,6 +91,16 @@ ui <- fluidPage(
 
 
 server <- function(input, output) {
+  
+  
+  
+  
+  output$txt_level <- renderText({input$level})
+
+  
+  
+  
+  
   
   output$bikes <- renderDataTable({
     # - reduce to those matching user inputs
