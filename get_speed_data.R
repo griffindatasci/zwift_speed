@@ -34,7 +34,7 @@ wheels <- main[!is.na(tempus) & !is.na(alp) & component=="wheel" & class=="road"
                  "tempus_w"=tempus, "alp_w"=alp)]
 
 bikes <- setkey(wheels[,c(k=1,.SD)],k)[frames[,c(k=1,.SD)],allow.cartesian=TRUE][,k:=NULL][,
-           .(class, "drops"=drops_f+drops_w, "level"=max(level_f, level_w), 
+           .(class, "drops"=drops_f+drops_w, "level"=max(level_f, level_w), level_f, level_w,
              "tempus"=tempus_f+tempus_w, "alp"=alp_f+alp_w), by=.(make_f, model_f, make_w, model_w)]
 
 
@@ -46,7 +46,7 @@ bikes[, alp:=alp+base_alp]
 
 # Add TRON ---------------------------------------------------------------------
 bikes <- rbind(bikes, data.table(make_f="Zwift", model_f="TRON", make_w="-", model_w="-", class="road", 
-                                 drops=0, level=0, tempus=3027, alp=2938))
+                                 drops=0, level=0, level_f=0, level_w=0, tempus=3027, alp=2938))
 
 
 

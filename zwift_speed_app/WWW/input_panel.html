@@ -1,12 +1,22 @@
-<label for="drops">Drops Budget:</label>
-<input id="drops" name="drops" type="number" min="0" max="6000000"/>
+<div class="input-container">
+  
+  <div class="input-item">
+    <h5>Max. Drops:</h5>
+    <input id="drops" name="drops" type="number" min="0" max="6000000"/>
+  </div>
+  
+  <div class="input-item">
+    <h5>Max. Level:</h5>
+    <input id="level" name="level" type="number" value="60" min="0" max="60"/>
+  </div>
 
-<!-- this range does not work as expected -->
-<!--label for="level">Max. Level</label>
-<input id="level" name="level" type="range" min="0" max="60"/-->
+  <div class="input-item">
+    <h5>TT Frames</h5>
+    <label class="switch" for="incl_tt">
+      <input id="incl_tt" name="incl_tt" type="checkbox"/>
+      <span class="slider round"></span>
+    </label>
+  </div>
+  
+</div>
 
-<!-- add labels: manually create three objects i a flexbox? -->
-<label class="switch" for="incl_tt">
-  <input id="incl_tt" name="incl_tt" type="checkbox">
-  <span class="slider round"></span>
-</label>

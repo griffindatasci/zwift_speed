@@ -5,9 +5,9 @@ account: griffindatasci
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7558886
-bundleId: 6585704
+bundleId: 6592765
 url: https://griffindatasci.shinyapps.io/app_test/
-when: 1670061640.36636
-lastSyncTime: 1670061640.36637
+when: 1670233507.77491
+lastSyncTime: 1670233507.77493
 asMultiple: FALSE
 asStatic: FALSE

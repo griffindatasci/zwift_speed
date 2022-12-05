@@ -30,13 +30,25 @@ bikes[class=="tt", class:="TT"]
 
 
 # Add bold to tron row
-bikes[model_f=="TRON", make_f:="<strong>Zwift</strong>"]
-bikes[model_f=="TRON", model_f:="<strong>TRON</strong>"]
+bikes[model_f=="TRON", make_f:="<strong><em>Zwift</em></strong>"]
+bikes[model_f=="TRON", model_f:="<strong><em>TRON</em></strong>"]
 
 
 # Paste make/model with line break
 bikes[, frame:=paste0(make_f, "<br>", model_f)]
 bikes[, wheel:=paste0(make_w, "<br>", model_w)]
+
+# Mark TT bikes
+bikes[class=="TT", frame:=paste0(frame, "<sup><em>TT</em></sup>")]
+
+
+# Mark gift items
+free_wheels <- bikes[make_f=="Zwift" & model_f=="Aero" & drops==319500, paste0(make_w, "<br>", model_w)]
+free_frames <- bikes[make_w=="Zwift" & model_w=="32mm Carbon" & drops==0, paste0(make_f, "<br>", model_f)]
+bikes[frame %in% free_frames, frame:=paste0("<em>", frame, "</em>")]
+bikes[wheel %in% free_wheels, wheel:=paste0("<em>", wheel, "</em>")]
+
+
 
 
 
@@ -56,16 +68,7 @@ ui <- fluidPage(
   
   
   includeHTML("WWW/input_panel.html"),
-  textOutput("txt_level"), # TODO
 
-  # inputPanel(
-     sliderInput("level", "Unlock Level", value=c(0,60), min=0, max=60, dragRange=FALSE),
-  #   numericInput("drops", "Drops Budget", value=NA, min=1, max=6000000),
-  #   checkboxInput("incl_tt", "Include TT Frames", value=TRUE)
-  # ),
-  # 
-  
-  
   
   
   
@@ -76,11 +79,12 @@ ui <- fluidPage(
     tabPanel("Bikes", dataTableOutput("bikes"))
   ),
   
+  tagAppendAttributes(class="footnote", tags$div("Items in italics are free or special unlock items, not available for purcahse in the drop shop.")),
+  
   tagAppendAttributes(class="footnote", tags$div(tags$p("This dashboard allows users to explore data from the ",
                                                         tags$a("Zwift Insider speed tests.", href="https://zwiftinsider.com/charts-frames/")),
                                                  tags$p("Frame and wheel selection affects performance in Zwift. Zwift Insider have performed tests using the majority of frames (paired with Zwift 32mm Carbon wheels) and wheels (paired with the Zwift Aero frame) on flat (two laps of Tempus Fugit) and climbing (the Alpe du Zwift) courses, using a bot set at 300W and 75kg (4W/kg)."), 
-                                                 tags$p("Because frame and wheel performance are independent of one another, these datasets from around 130 tests can be combined into a dataset of over 3,300 complete bikes, found in the bikes tab above. This dashboard allows rankings to be filtered on the basis of user level and available drops (the in-game currency), and dynamically returns the gap to the best performing item in the filtered dataset.")))
-  ,
+                                                 tags$p("Because frame and wheel performance are independent of one another, these datasets from around 130 tests can be combined into a dataset of over 3,300 complete bikes, found in the bikes tab above. This dashboard allows rankings to be filtered on the basis of user level and available drops (the in-game currency), and dynamically returns the gap to the best performing item in the filtered dataset."))),
   
   tagAppendAttributes(class="footnote", tags$div(tags$p("This service is developed and maintained by", 
                                                         tags$a(href="https://github.com/griffindatasci", "GriffinDataSci"))))
@@ -96,6 +100,7 @@ server <- function(input, output) {
   
   
   output$txt_level <- renderText({input$level})
+  output$txt_level2 <- renderText({input$level2})
 
   
   
@@ -104,7 +109,7 @@ server <- function(input, output) {
   
   output$bikes <- renderDataTable({
     # - reduce to those matching user inputs
-    bikes_out <- bikes[level>=input$level[1] & level<=input$level[2] & (drops<=input$drops | is.na(input$drops)) & 
+    bikes_out <- bikes[level<=input$level & (drops<=input$drops | is.na(input$drops)) & 
                          (class=="Road"|(class=="TT")==input$incl_tt)]
     
     # - format the output dataset
@@ -117,9 +122,10 @@ server <- function(input, output) {
                               "Climb"=ifelse(alp>min(alp), 
                                              paste0(format_seconds(alp), "<br>(+", sprintf("%.1f", alp-min(alp)), ")"),
                                              format_seconds(alp)), 
-                              "Class"=class,
-                              "Level"=level, 
-                              "Drops"=format(drops, big.mark=","))]
+                              #"Class"=class,
+                              "Level"=level
+                              #"Drops"=format(drops, big.mark=",")
+                              )]
     
     # - format the table (DT:: table, not data.table)
     format_dt(bikes_out)
@@ -128,10 +134,10 @@ server <- function(input, output) {
   
   output$frames <- renderDataTable({
     # - reduce to frames only (no need to adjust drops price, carbon 32mm wheel is free)
-    frames_out <- bikes[wheel=="Zwift<br>32mm Carbon"]
+    frames_out <- bikes[wheel=="<em>Zwift<br>32mm Carbon</em>"]
     
     # - reduce to those matching user inputs
-    frames_out <- frames_out[level>=input$level[1] & level<=input$level[2] & (drops<=input$drops | is.na(input$drops)) & 
+    frames_out <- frames_out[level<=input$level & (drops<=input$drops | is.na(input$drops)) & 
                                (class=="Road"|(class=="TT")==input$incl_tt)]
     
     # - format the output dataset
@@ -143,9 +149,10 @@ server <- function(input, output) {
                                 "Climb"=ifelse(alp>min(alp), 
                                                paste0(format_seconds(alp), "<br>(+", sprintf("%.1f", alp-min(alp)), ")"),
                                                format_seconds(alp)),
-                                "Class"=class,
-                                "Level"=level,
-                                "Drops"=format(drops, big.mark=","))]
+                                #"Class"=class,
+                                "Level"=level_f
+                                #"Drops"=format(drops, big.mark=",")
+                                 )]
     
     # - format the table (DT:: table, not data.table)
     format_dt(frames_out)
@@ -159,7 +166,7 @@ server <- function(input, output) {
     wheels_out <- bikes[frame=="Zwift<br>Aero"][, drops:=drops-min(drops)]
     
     # - reduce to those matching user inputs
-    wheels_out <- wheels_out[level>=input$level[1] & level<=input$level[2] & (drops<=input$drops | is.na(input$drops))]
+    wheels_out <- wheels_out[level<=input$level & (drops<=input$drops | is.na(input$drops))]
     
     # - format the output dataset
     wheels_out <- wheels_out[order(tempus),
@@ -170,8 +177,12 @@ server <- function(input, output) {
                                 "Climb"=ifelse(alp>min(alp), 
                                                paste0(format_seconds(alp), "<br>(+", sprintf("%.1f", alp-min(alp)), ")"),
                                                format_seconds(alp)), 
-                                "Level"=level, 
-                                "Drops"=format(drops, big.mark=","))]
+                                "Level"=level_w
+                                #"Drops"=format(drops, big.mark=",")
+                                )]
+    
+    # Free items - lower level to 0 (caused by zwift aero frame)
+    
     
     # - format the table (DT:: table, not data.table)
     format_dt(wheels_out)

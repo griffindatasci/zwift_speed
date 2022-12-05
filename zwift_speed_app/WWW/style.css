@@ -74,6 +74,38 @@ label > span {
   padding-top: 1em;
 }
 
+
+
+input {
+  border: none;
+  width: 7em;
+  text-align: right;
+  background: none;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+
+.input-item {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 200px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 1em 2em;
+}
+
+.input:focus {
+    outline: none !important;
+  }
+
+
 @media (min-width:1025px) { 
   body{
     font-size: 14px;
@@ -83,14 +115,15 @@ label > span {
 
 
 
-
-
+/******************************************************************************/
+/* Radio Button Switch * ///////////////////////////////////////////////////////
 /* The switch - the box around the slider */
 .switch {
+  margin-top: 4px;
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 54px;
+  height: 26px;
 }
 
 /* Hide default HTML checkbox */
@@ -108,18 +141,19 @@ label > span {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #ddd;
   -webkit-transition: .4s;
   transition: .4s;
+  border: none;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 22px;
+  width: 22px;
+  left: 3.5px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -141,9 +175,30 @@ input:checked + .slider:before {
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 14px;
 }
 
 .slider.round:before {
   border-radius: 50%;
 }
+
+
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
+
