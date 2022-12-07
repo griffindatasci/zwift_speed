@@ -11,71 +11,15 @@ h1 {
   text-align: center;
   font-size: 2.2em;
   font-weight: 400;
+  color: #FC6719;
 }
 
 a, strong {
   color: #FC6719;
 }
 
-label > span {
-  font-weight: 700;
-}
 
-.irs-from, .irs-to {
-  background-color: #b5c0c4 !important;
-  border: #97a9ad !important;
-}
-
-.irs-handle { 
-  background-color: #FC6719 !important;
-  border: none !important;
-}
-
-.irs-bar {
-  background-color: #5b7175 !important;
-  border: none !important;
-}
-
-.shiny-input-panel {
-  border-radius: 1em;
-  margin: 2em 0;
-  padding: 1.5em;
-  text-align: center;
-}
-
-.shiny-input-container {
-  height: 75px;
-  margin-top: 0.5em;
-}
-
-.shiny-flow-layout {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: start;
-}
-
-.shiny-flow-layout > div {
-  width: 250px;
-}
-
-.form-control {
-  text-align: center;
-}
-
-.checkbox {
-  margin-top: 0;
-}
-
-.footnote {
-  color: #505050;
-  margin: 3em 0;
-  border-top: 1px solid #FC6719;
-  padding-top: 1em;
-}
-
-
-
+/* Styling of inputs and the container for the input area ------------------- */
 input {
   border: none;
   width: 7em;
@@ -90,7 +34,6 @@ input {
     margin-bottom: 2em;
 }
 
-
 .input-item {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -101,23 +44,20 @@ input {
   margin: 1em 2em;
 }
 
-.input:focus {
-    outline: none !important;
-  }
+/* - Remove spinners on number inputs - Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-
-@media (min-width:1025px) { 
-  body{
-    font-size: 14px;
-    width: 100%;
-  }
+/* - Remove spinners on number inputs - Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 
-
-/******************************************************************************/
-/* Radio Button Switch * ///////////////////////////////////////////////////////
-/* The switch - the box around the slider */
+/* Switch for TT bikes ------------------------------------------------------ */
 .switch {
   margin-top: 4px;
   position: relative;
@@ -126,14 +66,13 @@ input {
   height: 26px;
 }
 
-/* Hide default HTML checkbox */
+/* - hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -159,21 +98,19 @@ input {
   transition: .4s;
 }
 
+/* - color change on checking*/
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #FC6719;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
+/* - make it slide */
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
+/* - rounded sliders */
 .slider.round {
   border-radius: 14px;
 }
@@ -183,22 +120,19 @@ input:checked + .slider:before {
 }
 
 
-
-
-
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+/* -------------------------------------------------------------------------- */
+.footnote {
+  color: #505050;
+  margin: 3em 0;
+  border-top: 1px solid #FC6719;
+  padding-top: 1em;
 }
 
 
-
-
-
+/* Mobile to desktop changes ------------------------------------------------ */
+@media (min-width:1025px) { 
+  body{
+    font-size: 14px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+# Change Log
+
+2022-12-06: 
+- Creation of change log
+- Update to fix on level for wheels:
+  - Wheels with unlock level<6 were not showing when filtering data to such
+  - Problem was use of level (where level=max(level_f, level_w)) rather than level_w
+  - incorporated fix into frames data too, despite zwift 32mm wheel being 0 level, for future proofing
+- Clean up of script
+- Added infinity symbol to inputs and altered filtering to allow na values in level (i.e. when level = infinite)
+- Tidy style.css and add orange color to the slider
+- Added format_time_gap() function to redcue repetitive code
+
+
+# Coming soon
+- Styling along top of page
