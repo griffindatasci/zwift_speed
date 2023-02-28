@@ -11,6 +11,9 @@
 - Tidy style.css and add orange color to the slider
 - Added format_time_gap() function to redcue repetitive code
 
+2022-12-07:
+- Tweaks to switch dimensions
+
 
 # Coming soon
 - Styling along top of page

@@ -5,9 +5,9 @@ account: griffindatasci
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7797917
-bundleId: 6603520
+bundleId: 6896895
 url: https://griffindatasci.shinyapps.io/zwift_speed_data/
-when: 1670401084.23205
-lastSyncTime: 1670401084.23211
+when: 1677583776.89264
+lastSyncTime: 1677583776.89267
 asMultiple: FALSE
 asStatic: FALSE

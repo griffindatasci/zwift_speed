@@ -1,4 +1,4 @@
-body { 
+/* body { 
   font-family: 'Source Code Pro', monospace;
   max-width: 1200px;
   width: 94%;
@@ -12,6 +12,55 @@ h1 {
   font-size: 2.2em;
   font-weight: 400;
   color: #FC6719;
+}
+*/
+
+body {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24pt;
+  width: 94%;
+  max-width: 1200px;
+  margin: 5em auto;
+  font-family: 'Source Code Pro', monospace;
+}
+
+
+.top-bar {
+  width: 90%;
+  max-width: 1200px;
+  height: 3em;
+  position: fixed;
+  top: 0;
+  left: 0.5;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 5;
+  font-weight: 500;
+  color: white;
+}
+
+.top-bar::before {
+  width: 100%;
+  height: 3em;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #FC6719;
+  z-index: -1;
+}
+
+.top-bar > .site-title > a {
+  color: #ffffffaa;
+  transition-duration: 0.4s;
+}
+
+.top-bar > .site-title > a:hover {
+  text-decoration: none;
+  color: white;
 }
 
 a, strong {
@@ -57,6 +106,13 @@ input[type=number] {
 }
 
 
+
+
+table {
+  line-height: 16pt;
+}
+
+
 /* Switch for TT bikes ------------------------------------------------------ */
 .switch {
   margin-top: 4px;
@@ -91,7 +147,7 @@ input[type=number] {
   content: "";
   height: 22px;
   width: 22px;
-  left: 3.5px;
+  left: 2px;
   bottom: 2px;
   background-color: white;
   -webkit-transition: .4s;
@@ -105,9 +161,9 @@ input:checked + .slider {
 
 /* - make it slide */
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(27.5px);
+  -ms-transform: translateX(27.5px);
+  transform: translateX(27.5px);
 }
 
 /* - rounded sliders */
@@ -133,6 +189,6 @@ input:checked + .slider:before {
 @media (min-width:1025px) { 
   body{
     font-size: 14px;
-    width: 100%;
+    width: 94%;
   }
 }

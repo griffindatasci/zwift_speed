@@ -64,7 +64,8 @@ ui <- fluidPage(
     
   
   # Top of page - title and user input interface  
-  tags$h1("Zwift Speed Data"),
+  #tags$h1("Zwift Speed Data"),
+  includeHTML("WWW/page_top.html"),
   includeHTML("WWW/input_panel.html"),
   
   # Tables
